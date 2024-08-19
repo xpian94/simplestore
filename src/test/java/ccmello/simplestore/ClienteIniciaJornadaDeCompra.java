@@ -1,4 +1,4 @@
-package io.cucumber.skeleton;
+package ccmello.simplestore;
 
 import io.cucumber.java.pt.Dada;
 

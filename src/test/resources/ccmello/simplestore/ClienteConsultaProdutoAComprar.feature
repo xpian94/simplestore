@@ -17,7 +17,7 @@ Funcionalidade: Como Cliente Eu gostaria de consultar produto para comprar
   Delineacao do Cenario: Procura por um produto por categoria
     Quando o cliente procurar por "<categoria>"
     Entao uma lista de produtos deve aparecer com produtos pertencentes a "<categoria>"
-    Entao cada produto mostrado aparecera com "<nome>", "<quantidade>" e "<disponivelAVenda>"
+    E cada produto mostrado aparecera com "<nome>", "<quantidade>" e "<disponivelAVenda>"
 
     Exemplos:
     | categoria  | nome                   | quantidade | disponivelAVenda |
