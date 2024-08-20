@@ -1,6 +1,8 @@
 # SimpleStore
 
-![example event parameter](https://github.com/xpian94/simplestore/blob/main/.github/workflows/github-actions.yml/badge.svg?event=push)
+[![CI](https://github.com/xpian94/simplestore/actions/workflows/github-actions.yml/badge.svg)](https://github.com/xpian94/simplestore/actions/workflows/github-actions.yml)
+[![Coverage](https://github.com/xpian94/simplestore/actions/workflows/badges/jacoco.svg)]()
+
 
 Your on-line store.
 
