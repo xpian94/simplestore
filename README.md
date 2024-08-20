@@ -1,5 +1,7 @@
 # SimpleStore
 
+![example event parameter](https://github.com/xpian94/simplestore/blob/main/.github/workflows/github-actions.yml/badge.svg?event=push)
+
 Your on-line store.
 
 ## About Tests
