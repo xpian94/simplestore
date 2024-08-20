@@ -1,5 +1,6 @@
-package ccmello.simplestore;
+package ccmello.simplestore.e2e;
 
+import ccmello.simplestore.ProductRepository;
 import io.cucumber.java.After;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,5 +1,6 @@
-package ccmello.simplestore;
+package ccmello.simplestore.e2e;
 
+import ccmello.simplestore.Application;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.junit.platform.suite.api.ConfigurationParameter;
 import org.junit.platform.suite.api.IncludeEngines;
@@ -17,5 +18,5 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "ccmello.simplestore")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = Application.class)
 @CucumberContextConfiguration
-public class RunCucumberTest {
+public class E2ETest {
 }

@@ -1,4 +1,4 @@
-package ccmello.simplestore;
+package ccmello.simplestore.e2e;
 
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
