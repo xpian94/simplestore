@@ -1,6 +1,6 @@
 # SimpleStore
 
-![example event parameter](https://github.com/xpian94/simplestore/blob/main/.github/workflows/github-actions.yml/badge.svg?event=pull_request)
+[![CI](https://github.com/xpian94/simplestore/actions/workflows/github-actions.yml/badge.svg)](https://github.com/xpian94/simplestore/actions/workflows/github-actions.yml)
 
 Your on-line store.
 
