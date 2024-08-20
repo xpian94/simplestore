@@ -1,8 +1,8 @@
 # SimpleStore
 
 [![CI](https://github.com/xpian94/simplestore/actions/workflows/github-actions.yml/badge.svg)](https://github.com/xpian94/simplestore/actions/workflows/github-actions.yml)
-[![Coverage](https://github.com/xpian94/simplestore/actions/workflows/badges/jacoco.svg)]()
-
+[![codecov - branches](https://github.com/xpian94/simplestore/blob/main/.github/badges/branches.svg)](https://github.com/xpian94/simplestore/actions/workflows/github-actions.yml)
+[![codecov - missed instructions](https://github.com/xpian94/simplestore/blob/main/.github/badges/jacoco.svg)](https://github.com/xpian94/simplestore/actions/workflows/github-actions.yml)
 
 Your on-line store.
 
