@@ -5,31 +5,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class ProductController {
+    private final ProductRepository repo;
+
+    public ProductController(ProductRepository repo) {
+        this.repo = repo;
+    }
+
     @GetMapping(value = "/product", produces = MediaType.APPLICATION_JSON_VALUE)
-    String searchByCategory(@RequestParam(name = "category") String category) {
-        return """
-            [
-                {
-                    "category": "Utensilios",
-                    "name": "Kit 12 Facas",
-                    "quantity": 3,
-                    "available": true
-                },
-                {
-                    "category": "Utensilios",
-                    "name": "Colher de Silicone",
-                    "quantity": 12,
-                    "available": true
-                },
-                {
-                    "category": "Utensilios",
-                    "name": "Ralador 4 faces Inox",
-                    "quantity": 0,
-                    "available": false
-                }
-            ]
-            """;
+    List<Product> searchByCategory(@RequestParam(name = "category") String category) {
+        return (List<Product>) repo.findAll();
     }
 }

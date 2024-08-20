@@ -1,18 +1,16 @@
 # language: pt
 
-  # Historia de Usuario:
-  # Como um Cliente a procura de um produto,
-  # Eu gostaria de saber se o produto está a venda,
-  # De modo que Eu possa ser encorajado a comprá-lo.
-
-  # Criterios de Aceite:
-  # 1. Procura por um produto por categoria
-  # 2. Recebe um aviso ao procurar categoria indisponivel
-
-
 Funcionalidade: Como Cliente Eu gostaria de consultar produto para comprar
+  Como um Cliente a procura de um produto
+  Eu gostaria de saber se o produto está a venda
+  De modo que Eu possa ser encorajado a comprá-lo.
+
+  Criterios de Aceite:
+    1. Procura por um produto por categoria
+    2. Recebe um aviso ao procurar categoria indisponivel
+
   Fundo:
-    Dada a jornada iniciada pelo cliente
+    Dados produtos cadastrados na loja
 
   Delineacao do Cenario: Procura por um produto por categoria
     Quando o cliente procurar por "<categoria>"
