@@ -17,7 +17,7 @@ jobs:
 
       - name: Build Tests (Unit and Integration)
         if: github.ref != 'refs/heads/main'
-        run: mvn clean verify -P ut-it
+        run: mvn clean verify jacoco:report-aggregate -P ut-it
 
       - name: Generate JaCoCo Badge
         id: jacoco
