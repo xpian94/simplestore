@@ -12,7 +12,12 @@ jobs:
           java-version: '21'
           cache: 'maven'
       - name: Build and All Tests
+        if: github.ref == 'refs/heads/main'
         run: mvn clean verify -P all-tests
+
+      - name: Build Tests (Unit and Integration)
+        if: github.ref != 'refs/heads/main'
+        run: mvn clean verify -P ut-it
 
       - name: Generate JaCoCo Badge
         id: jacoco
