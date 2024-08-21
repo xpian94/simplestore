@@ -2,7 +2,6 @@ name: CI
 on:
   pull_request:
     branches:
-      - '*'
       - 'main'
 jobs:
   test:
@@ -21,10 +20,10 @@ jobs:
         if: startsWith(github.head_ref, 'release')
         run: mvn clean verify -P all-tests
 
-#      - name: Build Tests (Unit and Integration)
-#        if: contains(github.ref, 'refs/heads/feature/*')
-#        run:
-#          mvn clean verify -P ut-it
+      - name: Build Tests (Unit and Integration)
+        if: startsWith(github.head_ref, 'feature')
+        run:
+          mvn clean verify -P ut-it
 
       - name: Generate JaCoCo Badge
         id: jacoco
