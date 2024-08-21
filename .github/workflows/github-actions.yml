@@ -2,6 +2,8 @@ name: CI
 on:
   pull_request:
     branches:
+      - 'feature/*'
+      - 'release/*'
       - 'main'
 jobs:
   test:
@@ -17,7 +19,7 @@ jobs:
         run: echo "${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
 
       - name: Build and All Tests
-        if: startsWith(github.head_ref, 'release')
+        if: startsWith(github.head_ref, 'release') || startsWith(github.base_ref, 'release')
         run: mvn clean verify -P all-tests
 
       - name: Build Tests (Unit and Integration)
