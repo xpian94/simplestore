@@ -19,7 +19,9 @@ jobs:
 
       - name: Build Tests (Unit and Integration)
         if: github.ref != 'refs/heads/main'
-        run: mvn clean verify -P ut-it
+        run:
+          echo ${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}
+          mvn clean verify -P ut-it
 
       - name: Generate JaCoCo Badge
         id: jacoco
