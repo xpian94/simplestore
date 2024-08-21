@@ -13,13 +13,17 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           cache: 'maven'
+      - name: CI Info
+        run: echo "${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
+
       - name: Build and All Tests
-        if: github.ref == 'refs/heads/release'
+        if: contains('refs/heads/release/*', github.ref)
         run: mvn clean verify -P all-tests
 
       - name: Build Tests (Unit and Integration)
-        if: github.ref != 'refs/heads/main'
-        run: mvn clean verify -P ut-it
+        if: contains('refs/heads/feature/*', github.ref)
+        run:
+          mvn clean verify -P ut-it
 
       - name: Generate JaCoCo Badge
         id: jacoco
