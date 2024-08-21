@@ -17,7 +17,7 @@ jobs:
         run: echo "${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
 
       - name: Build and All Tests
-        if: startsWith(github.ref, 'refs/heads/release')
+        if: "startsWith(github.ref, 'refs/heads/release/')"
         run: mvn clean verify -P all-tests
 
       - name: Build Tests (Unit and Integration)
