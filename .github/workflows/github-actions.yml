@@ -2,7 +2,7 @@ name: CI
 on:
   pull_request:
     branches:
-      - main
+      - 'main'
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -17,11 +17,11 @@ jobs:
         run: echo "${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
 
       - name: Build and All Tests
-        if: contains('refs/heads/release/*', github.ref)
+        if: startsWith(github.head_ref, 'release')
         run: mvn clean verify -P all-tests
 
       - name: Build Tests (Unit and Integration)
-        if: contains('refs/heads/feature/*', github.ref)
+        if: startsWith(github.head_ref, 'feature')
         run:
           mvn clean verify -P ut-it
 
