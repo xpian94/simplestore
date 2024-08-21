@@ -10,7 +10,7 @@ public class ProductService {
     @Autowired
     private ProductRepository repository;
 
-    public List<Object> searchByCategory(String value) {
+    public List<Product> searchByCategory(String value) {
 
         return repository.findByCategory(value);
     }
