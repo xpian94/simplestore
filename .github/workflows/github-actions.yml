@@ -17,11 +17,11 @@ jobs:
         run: echo "${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
 
       - name: Build and All Tests
-        if: contains('refs/heads/release/*', github.ref)
+        if: contains(github.ref, 'refs/heads/release/*')
         run: mvn clean verify -P all-tests
 
       - name: Build Tests (Unit and Integration)
-        if: contains('refs/heads/feature/*', github.ref)
+        if: contains(github.ref, 'refs/heads/feature/*')
         run:
           mvn clean verify -P ut-it
 
